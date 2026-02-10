@@ -26,6 +26,16 @@
 - 네이밍: snake_case(변수/함수), CamelCase(클래스), UPPER_CASE(상수)
 - type hints 적극 사용
 - import 순서: 표준 라이브러리 → 서드파티 → 로컬
+- `from` import 시 쉼표로 나열하지 않고 한 줄에 하나씩 작성
+  ```python
+  # Good
+  from typing import Optional
+  from typing import List
+  from typing import Dict
+
+  # Bad
+  from typing import Optional, List, Dict
+  ```
 
 ## 기타
 - Python 3.8+ 기준
