@@ -1,0 +1,9 @@
+# 모든 파일 무시
+*
+
+# 추적할 파일만 허용
+!.gitignore
+!CLAUDE.md
+!settings.json
+!rules/
+!rules/**
