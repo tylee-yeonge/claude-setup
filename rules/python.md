@@ -25,16 +25,30 @@
 ## Google Python Style 따르는 항목
 - 네이밍: snake_case(변수/함수), CamelCase(클래스), UPPER_CASE(상수)
 - type hints 적극 사용
-- import 순서: 표준 라이브러리 → 서드파티 → 로컬
+- **import 문은 항상 파일 맨 상단에 위치** (함수/클래스 내부에서 import 금지)
+- import 순서: 표준 라이브러리 → 서드파티 → 로컬 (각 그룹 사이 빈 줄)
 - `from` import 시 쉼표로 나열하지 않고 한 줄에 하나씩 작성
   ```python
-  # Good
+  # Good - 파일 상단에 모든 import
+  import os
+  import sys
   from typing import Optional
   from typing import List
   from typing import Dict
 
-  # Bad
-  from typing import Optional, List, Dict
+  import rclpy
+  from rclpy.node import Node
+
+  from .utils import helper_function
+
+
+  def process_data():
+      return os.getcwd()
+
+  # Bad - 함수 내부에서 import
+  def process_data():
+      import os  # 금지!
+      return os.getcwd()
   ```
 
 ## 기타
