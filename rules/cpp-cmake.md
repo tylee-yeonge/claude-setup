@@ -2,6 +2,19 @@
 
 ## Google Style과 다른 점
 - **들여쓰기: 4칸 스페이스** (Google 기본은 2칸이지만 4칸 사용)
+- **중괄호: Allman 스타일** (여는 중괄호를 다음 줄에 배치)
+  ```cpp
+  // Good (Allman)
+  void foo()
+  {
+      ...
+  }
+
+  // Bad (K&R)
+  void foo() {
+      ...
+  }
+  ```
 
 ## 주석 (Doxygen)
 - 헤더 파일의 클래스, 함수에 Doxygen 형식 주석 필수
