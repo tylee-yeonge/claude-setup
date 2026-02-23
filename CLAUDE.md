@@ -6,6 +6,14 @@
 - 변수명, 함수명, 클래스명은 영어
 - 커밋 메시지는 영어로 작성
 
+## Git 커밋 규칙
+- 커밋 메시지 형식: `<type>: <subject>` (Conventional Commits 스타일)
+  - type: feat, fix, docs, style, refactor, test, chore 등
+  - subject: 영어로 작성, 소문자 시작, 마침표 없음
+- 커밋 메시지에 "🤖 Generated with [Claude Code]" 문구를 포함하지 않기
+- 커밋 메시지에 "Co-Authored-By: Claude <noreply@anthropic.com>" 포함하지 않기
+- 깔끔하고 간결한 커밋 메시지만 작성하기
+
 ## 에이전트 사용 규칙
 - Task 도구로 서브에이전트를 생성하지 않기
 - 모든 작업을 직접 수행하기 (Glob, Grep, Read, Edit 등 직접 호출)
