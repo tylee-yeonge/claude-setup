@@ -5,12 +5,14 @@
 - 코드 주석은 한국어로 작성
 - 변수명, 함수명, 클래스명은 영어
 - 커밋 메시지는 영어로 작성
+- 이모지 사용 금지 (코드, 주석, 커밋 메시지, 응답, 문서 등 모든 곳에서)
+- ASCII 아트를 그릴 때는 표준 ASCII 문자(0x20~0x7E)만 사용 (유니코드 박스 드로잉 문자, 특수 기호 등 금지)
 
 ## Git 커밋 규칙
 - 커밋 메시지 형식: `<type>: <subject>` (Conventional Commits 스타일)
   - type: feat, fix, docs, style, refactor, test, chore 등
   - subject: 영어로 작성, 소문자 시작, 마침표 없음
-- 커밋 메시지에 "🤖 Generated with [Claude Code]" 문구를 포함하지 않기
+- 커밋 메시지에 "Generated with [Claude Code]" 문구를 포함하지 않기
 - 커밋 메시지에 "Co-Authored-By: Claude <noreply@anthropic.com>" 포함하지 않기
 - 깔끔하고 간결한 커밋 메시지만 작성하기
 
