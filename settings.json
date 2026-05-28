@@ -1,5 +1,7 @@
 {
   "permissions": {
-    "defaultMode": "plan"
-  }
+    "defaultMode": "auto"
+  },
+  "theme": "dark",
+  "skipAutoPermissionPrompt": true
 }
