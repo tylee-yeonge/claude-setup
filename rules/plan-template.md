@@ -1,6 +1,6 @@
 # 계획 파일(plan.md) 작성 템플릿
 
-`~/.claude/CLAUDE.md`의 "계획 수립" 항목에서 호출되는 표준 템플릿. 복잡한 작업(마이그레이션, 리팩토링, 새 기능 도입 등)을 계획할 때 plan.md는 아래 구조를 따라 작성한다.
+`~/.claude/rules/docs-structure.md`의 spec 골격의 원형이 되는 템플릿. 문서의 위치/파일명/spec-plan 분리는 docs-structure.md가 우선하며, 이 문서는 § 구조의 상세(롤백 전략 옵션 비교 표, 진행 보드, semver/CHANGELOG 결정 등)가 필요할 때 spec 작성에 차용하는 참고 자료다.
 
 참고 사례: `/Volumes/TYLEE_256/nanobot-docker/nanobot-0.2.0-migration-plan.md` (이 템플릿의 모델이 된 문서).
 
@@ -227,6 +227,5 @@
 
 ## 파일 위치 관례
 
-- 프로젝트별 plan은 해당 레포 루트 또는 `docs/` 하위에 `{{topic}}-plan.md` 형태로 저장 (예: `nanobot-0.2.0-migration-plan.md`).
-- 개인 메모 성격의 plan은 `~/.claude/plans/`에 저장 가능.
-- 어느 쪽이든 동일 템플릿을 따른다.
+- 위치와 파일명은 `~/.claude/rules/docs-structure.md`를 따른다 (spec: `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`).
+- 개인 메모 성격의 문서는 `~/.claude/plans/`에 같은 파일명 규칙으로 저장 가능.
