@@ -23,8 +23,8 @@ docs/
 - spec과 plan은 **같은 topic slug**를 공유한다. spec에만 `-design` 접미어를 붙인다
   - spec: `2026-01-15-user-auth-design.md`
   - plan: `2026-01-16-user-auth.md`
-- 대형 작업은 spec 하나에 plan 여러 개 — plan에 Phase 접미어를 붙인다
-  - `2026-01-16-user-auth-phase0.md`, `2026-02-01-user-auth-phase1-token-rotation.md`, ...
+- 대형 작업도 plan은 **단일 파일** — Phase별로 파일을 나누지 않고, plan 문서 안에서 `## Phase N` 섹션으로 분할한다
+  - 예: `2026-01-16-user-auth.md` 하나가 Phase 0-6 전체를 담는다
 - 날짜 접두어는 각 문서의 작성일 (spec과 plan의 날짜가 다를 수 있음)
 - research 문서는 날짜 접두어 없이 `<topic>.md`, 작성일은 본문 메타에 기록
 
@@ -60,7 +60,7 @@ spec/plan 분리 원칙:
 > 대상: {{변경 대상 파일/모듈/시스템 (규모 수치 포함)}}
 > 사유: {{한 줄 — 왜 이 작업이 필요한가}}
 > 관련 분석: {{research/분석 문서 경로 (있을 때)}}
-> Plan: {{Phase별 plan은 §5 카탈로그 참조 / 단일 plan이면 경로 직접}}
+> Plan: {{plan 문서 경로}} (다 Phase 작업이면 "Phase 0-N 통합, §5 카탈로그 참조" 병기)
 
 ## 목차
 
@@ -95,10 +95,10 @@ spec/plan 분리 원칙:
 
 ## 5. 로드맵 (Phase 카탈로그)
 {{공통 절차 요약 + 아래 표. 세부 체크박스는 두지 않는다}}
-| Phase | 목적 | 핵심 산출물 | 선행 조건 | plan 문서 |
+| Phase | 목적 | 핵심 산출물 | 선행 조건 | plan 섹션 |
 |---|---|---|---|---|
-| 0 | ... | ... | 없음 | `YYYY-MM-DD-{{topic}}-phase0.md` |
-| 1 | ... | ... | Phase 0 | 착수 시 작성 |
+| 0 | ... | ... | 없음 | 통합 plan §Phase 0 (진행 중) |
+| 1 | ... | ... | Phase 0 | 통합 plan §Phase 1 (Draft) |
 
 ## 6. 검증 기준
 {{시스템 전체의 통과 기준. 항목에 영역별 접두어 + 번호로 ID 부여
@@ -202,6 +202,8 @@ plan 작성 원칙:
 - 검증을 먼저 쓸 수 있는 변경은 TDD 순서(실패하는 검증 작성 -> 실패 확인 -> 변경 -> 통과 확인)를 따른다. 파일 신규 작성처럼 선행 검증이 무의미하면 "작성 -> 검증 -> 커밋"으로 축약
 - Step 본문에는 실행할 명령/내용을 그대로 넣는다. "적절히 수정" 같은 모호한 지시 금지
 - 부분 완료 상태(제한된 환경의 테스트 결과 등)는 해당 검증 Step 아래 "진행 상황 (날짜):" 으로 기록하고, 잔여 확인은 Verification 항목으로 이관
+- 다 Phase 작업은 plan 안에서 `## Phase N: {{제목}}` 섹션으로 분할한다. Task 번호는 Phase 충돌을 피해 `Task N-M` 형식, 각 Phase 끝에 해당 Phase의 검증 항목을 둔다
+- 착수 전 Phase 섹션은 체크박스 항목 수준의 **Draft**로 두고 상태를 명시한다 — 착수 시 진행 중 Phase 수준(Files/Interfaces/Step/검증/커밋)으로 세부화한다
 
 ## research 골격
 
