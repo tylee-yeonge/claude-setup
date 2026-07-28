@@ -1,8 +1,13 @@
 {
   "permissions": {
+    "allow": [
+      "Bash(docker exec *)"
+    ],
     "defaultMode": "auto"
   },
+  "model": "opus[1m]",
+  "effortLevel": "xhigh",
+  "tui": "fullscreen",
   "theme": "dark",
-  "skipAutoPermissionPrompt": true,
-  "model": "claude-fable-5[1m]"
+  "skipAutoPermissionPrompt": true
 }
